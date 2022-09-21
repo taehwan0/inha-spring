@@ -8,7 +8,7 @@ public class TVUser {
         AbstractApplicationContext container =
                 new GenericXmlApplicationContext("applicationContext.xml");
 
-        TV tv = container.getBean("tv", TV.class);
+        TV tv = container.getBean("lgTV", TV.class);
         tv.powerOn();
         tv.volumeUp();
     }

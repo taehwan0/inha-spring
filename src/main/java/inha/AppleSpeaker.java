@@ -1,5 +1,8 @@
 package inha;
 
+import org.springframework.stereotype.Component;
+
+@Component("appleSpeaker")
 public class AppleSpeaker implements Speaker {
 
     public AppleSpeaker() {

@@ -1,7 +1,14 @@
 package inha;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
+
+@Component("lgTV")
 public class LgTV implements TV {
 
+    @Autowired
+    @Qualifier("sonySpeaker")
     private Speaker speaker;
 
     public LgTV() {
