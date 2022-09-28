@@ -8,5 +8,10 @@
     <bean id="boardService" class="com.springbook.biz.board.impl.BoardServiceImpl">
         <property name="boardDAO" ref="boardDAO"/>
     </bean>
-    <bean id="boardDAO" class="com.springbook.biz.board.impl.BoardDAOJDBC"></bean>
+    <bean id="boardDAO" class="com.springbook.biz.board.impl.BoardDAOJDBC"/>
+
+    <bean id="userService" class="com.springbook.biz.user.impl.UserServiceImpl">
+        <constructor-arg ref="userDAO"/>
+    </bean>
+    <bean id="userDAO" class="com.springbook.biz.user.impl.UserDAOJDBC"/>
 </beans>
