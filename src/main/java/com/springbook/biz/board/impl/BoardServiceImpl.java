@@ -3,11 +3,15 @@ package com.springbook.biz.board.impl;
 import com.springbook.biz.board.BoardDAO;
 import com.springbook.biz.board.BoardService;
 import com.springbook.biz.board.BoardVO;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service("boardService")
 public class BoardServiceImpl implements BoardService {
 
+    @Autowired
     private BoardDAO boardDAO;
 
     public void setBoardDAO(BoardDAO boardDAO) {
