@@ -18,5 +18,13 @@
             <artifactId>mariadb-java-client</artifactId>
             <version>3.0.7</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/io.quarkus/quarkus-junit5 -->
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-junit5</artifactId>
+            <version>2.13.0.Final</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
+
 </project>
