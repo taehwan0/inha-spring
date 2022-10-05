@@ -12,21 +12,20 @@ public class UserTestCase {
     private final static UserService userService = container.getBean("userService", UserService.class);
 
     @BeforeAll
-    @DisplayName("Before: insertUser")
-    static void setUp() {
+    static void insertUser() {
         UserVO vo = new UserVO("lee", "0000", "0000", "user");
         userService.insertUser(vo);
         UserVO savedUser = userService.getUser(vo);
-        System.out.println("savedUser: " + savedUser.toString());
+        System.out.println("insertUser: " + savedUser);
     }
 
-//    @Test
-//    @DisplayName("getUser Test")
-//    void getUser() {
-//        UserVO vo = new UserVO("lee", "", "", "");
-//        UserVO savedUser = userService.getUser(vo);
-//        System.out.println(savedUser.toString());
-//    }
+    @Test
+    @DisplayName("Test: getUser")
+    void getUser() {
+        UserVO vo = new UserVO("lee", "0000", "", "");
+        UserVO savedUser = userService.getUser(vo);
+        System.out.println(savedUser.toString());
+    }
 
     @Test
     @DisplayName("Test: updateUser")
@@ -38,14 +37,17 @@ public class UserTestCase {
     }
 
     @Test
-    @DisplayName("Test: deleteUser")
-    void deleteUser() {
-        UserVO vo = new UserVO("lee", "", "", "");
-        userService.deleteUser(vo);
+    void getUserList() {
         List<UserVO> userList = userService.getUserList();
-        System.out.println("deletedUser: " + vo);
         System.out.println("========== Users in DB ==========");
         userList.forEach(System.out::println);
-        System.out.println("========== Users in DB ==========");
+        System.out.println("=================================");
+    }
+
+    @AfterAll
+    static void deleteUser() {
+        UserVO vo = new UserVO("lee", "", "", "");
+        userService.deleteUser(vo);
+        System.out.println("deleteUser: " + vo);
     }
 }

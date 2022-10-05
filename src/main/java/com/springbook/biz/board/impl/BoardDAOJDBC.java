@@ -3,11 +3,13 @@ package com.springbook.biz.board.impl;
 import com.springbook.biz.board.BoardDAO;
 import com.springbook.biz.board.BoardVO;
 import com.springbook.biz.common.JDBCUtil;
+import org.springframework.stereotype.Repository;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+@Repository("boardDAO")
 public class BoardDAOJDBC implements BoardDAO {
     @Override
     public void insertBoard(BoardVO vo) {

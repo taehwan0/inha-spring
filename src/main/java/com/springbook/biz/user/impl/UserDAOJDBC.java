@@ -3,6 +3,7 @@ package com.springbook.biz.user.impl;
 import com.springbook.biz.common.JDBCUtil;
 import com.springbook.biz.user.UserDAO;
 import com.springbook.biz.user.UserVO;
+import org.springframework.stereotype.Repository;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -11,6 +12,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+@Repository("userDAO")
 public class UserDAOJDBC implements UserDAO {
 
     @Override
