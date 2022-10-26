@@ -9,7 +9,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-@Repository("boardDAO")
+//@Repository("boardDAO")
 public class BoardDAOJDBC implements BoardDAO {
     @Override
     public void insertBoard(BoardVO vo) {

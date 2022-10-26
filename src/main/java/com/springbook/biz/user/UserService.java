@@ -8,4 +8,5 @@ public interface UserService {
     void deleteUser(UserVO vo);
     UserVO getUser(UserVO vo);
     List<UserVO> getUserList();
+    UserVO login(UserVO vo);
 }

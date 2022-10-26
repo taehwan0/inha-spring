@@ -9,30 +9,30 @@ import java.util.List;
 
 public class BoardTestCase {
 
-//    private final static AbstractApplicationContext container = new GenericXmlApplicationContext("applicationContext.xml");
-//    private final static BoardService boardService = container.getBean("boardService", BoardService.class);
+   private final static AbstractApplicationContext container = new GenericXmlApplicationContext("applicationContext.xml");
+   private final static BoardService boardService = container.getBean("boardService", BoardService.class);
 
-    BoardService boardService;
-
-    @BeforeEach
-    void setUp() {
-        AbstractApplicationContext container = new GenericXmlApplicationContext("applicationContext.xml");
-        boardService = container.getBean("boardService", BoardService.class);
-    }
+    // BoardService boardService;
+    //
+    // @BeforeEach
+    // void setUp() {
+    //     AbstractApplicationContext container = new GenericXmlApplicationContext("applicationContext.xml");
+    //     boardService = container.getBean("boardService", BoardService.class);
+    // }
 
     @Test
     void insertBoard() {
         BoardVO vo = new BoardVO();
-        vo.setTitle("111");
-        vo.setWriter("111");
-        vo.setContent("111");
+        vo.setTitle("000");
+        vo.setWriter("000");
+        vo.setContent("000");
         boardService.insertBoard(vo);
     }
 
     @Test
     void updateBoard() {
         BoardVO vo = new BoardVO();
-        vo.setSeq(4);
+        vo.setSeq(18);
         vo.setTitle("999");
         vo.setContent("999");
 

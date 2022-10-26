@@ -49,6 +49,10 @@ public class UserVO {
                 '}';
     }
 
+    public UserVO() {
+
+    }
+
     public UserVO(String id, String password, String name, String role) {
         this.id = id;
         this.password = password;

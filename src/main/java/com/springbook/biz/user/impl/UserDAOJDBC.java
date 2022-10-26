@@ -12,7 +12,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-@Repository("userDAO")
+// @Repository("userDAO")
 public class UserDAOJDBC implements UserDAO {
 
     @Override
@@ -98,6 +98,11 @@ public class UserDAOJDBC implements UserDAO {
             e.printStackTrace();
         }
         return userList;
+    }
+
+    @Override
+    public UserVO login(UserVO vo) {
+        return null;
     }
 
     private UserVO setUserVO(ResultSet resultSet) throws SQLException {
