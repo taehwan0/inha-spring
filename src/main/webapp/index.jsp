@@ -1,16 +1,19 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: buddy
-  Date: 2022/09/21
-  Time: 19:13
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
 <html>
-  <head>
-    <title>$Title$</title>
-  </head>
-  <body>
-  $END$
-  </body>
+<head>
+<title>Insert title here</title>
+</head>
+<body>
+
+<center>
+	<h1>게시판 프로그램</h1>
+	
+	<hr>
+		<a href="login.do">로그인</a><br><br><br>
+		<a href="getBoardList.do">글 목록 바로가기</a>
+	<hr>	
+</center>
+
+</body>
 </html>
