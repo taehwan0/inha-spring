@@ -16,11 +16,6 @@ public class BoardController {
 	@Autowired
 	private BoardService boardService;
 
-	@RequestMapping({"/", "/index"})
-	public String index() {
-		return "index.jsp";
-	}
-
 	@RequestMapping("/insertBoard.do")
 	public void insertBoard(BoardVO boardVO) {
 		boardService.insertBoard(boardVO);
