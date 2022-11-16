@@ -2,12 +2,9 @@ package com.springbook.biz.user.impl;
 
 import com.springbook.biz.user.UserDAO;
 import com.springbook.biz.user.UserVO;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
 @Repository("userDAO")
@@ -71,18 +68,5 @@ public class UserDAOSpring implements UserDAO {
             vo.getId(),
             vo.getPassword()
         );
-    }
-}
-
-class UserRowMapper implements RowMapper<UserVO> {
-
-    @Override
-    public UserVO mapRow(ResultSet resultSet, int i) throws SQLException {
-        String id = resultSet.getString("id");
-        String name = resultSet.getString("name");
-        String password = resultSet.getString("password");
-        String role = resultSet.getString("role");
-
-        return new UserVO(id, password, name, role);
     }
 }
